@@ -1,6 +1,18 @@
-create database QuanLyBanHang
+create database QuanLyBanHangg
 go
-use QuanLyBanHangg
+
+ON
+( NAME = QuanLyBanHang_MDF,
+    FILENAME = 'D:\Assignment\DataBase\quanlybanhang.mdf',
+    SIZE = 50MB,
+    MAXSIZE = 300MB,
+    FILEGROWTH = 15MB )
+LOG ON
+( NAME = QuanLyBanHang_LDF,
+    FILENAME = 'D:\Assignment\DataBase\quanlybanhang.ldf',
+    SIZE = 50MB,
+    MAXSIZE = 300MB,
+    FILEGROWTH = 10MB );
 
 go 
 create table NhanVien
