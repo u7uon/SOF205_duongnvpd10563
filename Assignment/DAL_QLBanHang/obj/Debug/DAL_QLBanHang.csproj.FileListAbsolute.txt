@@ -1,0 +1,9 @@
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\bin\Debug\DAL_QLBanHang.dll
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\bin\Debug\DAL_QLBanHang.pdb
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\bin\Debug\DTO_QLBanHang.dll
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\bin\Debug\DTO_QLBanHang.pdb
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.csproj.AssemblyReference.cache
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\obj\Debug\DAL_QLBa.95D121C7.Up2Date
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.dll
+C:\Users\pc\source\repos\Assignment\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.pdb
