@@ -22,7 +22,11 @@ namespace GUI_QLBanHang
         }
 
         private string usingEmail;
-        private string FileName = null;
+        private string currentImg =""; 
+        private string FileName;
+        private string fileSavePath;
+        private string fileAddress;
+        private string checkURl; 
         private BUS_SanPham bus_sp = new BUS_SanPham();
 
 
@@ -35,12 +39,24 @@ namespace GUI_QLBanHang
             dataGridView1.Columns[3].HeaderText = "Giá bán";
             dataGridView1.Columns[4].HeaderText = "Giá Nhập";
             dataGridView1.Columns[5].HeaderText = "Ghi chú";
-            dataGridView1.Columns[4].HeaderText = "Mã Nhân viên";
+            dataGridView1.Columns[6].HeaderText = "Hình ảnh";
+            dataGridView1.Columns[7].HeaderText = "Mã Nhân viên";
+        }
+        private void OpenImg(string address)
+        {
+            try
+            {
+                pcbImg.Image = Image.FromFile(address); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); 
+            }
         }
 
         private bool IsBlank()
         {
-            return txtTenSp == null || txtSoluong == null || txtGiaBan == null || txtGiaNhap == null || rtxtGhichu == null || FileName == null;
+            return txtTenSp.Text == "" || txtSoluong.Text == "" || txtGiaBan.Text == "" || txtGiaNhap.Text == "" || rtxtGhichu.Text == "" || currentImg == "";
         }
 
         private void moHinh()
@@ -50,9 +66,19 @@ namespace GUI_QLBanHang
             open.Title = "Chọn ảnh minh họa cho sản phẩm";
             if (open.ShowDialog() == DialogResult.OK)
             {
-                FileName = open.FileName;
-                pcbImg.Image = Image.FromFile(FileName);
+                fileAddress = open.FileName;
+                OpenImg(fileAddress);
+                FileName = Path.GetFileName(open.FileName);
+                string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+                fileSavePath = saveDirectory + "\\Images\\" + FileName;
+                currentImg = "\\Images\\" + FileName ;
             }
+        }
+        private void setControls(bool check)
+        {
+            btnUpdate.Enabled = check;
+            btnDelete.Enabled = check;
+            btnAddnew.Enabled = check;
         }
         void ClearInput()
         {
@@ -63,7 +89,7 @@ namespace GUI_QLBanHang
             txtGiaNhap.Clear();
             rtxtGhichu.Clear();
             pcbImg.Image = null;
-            FileName = null;
+            currentImg = null;
         }
         private void btnImg_Click(object sender, EventArgs e)
         {
@@ -80,13 +106,15 @@ namespace GUI_QLBanHang
                     SoLuong = Convert.ToInt16(txtSoluong.Text),
                     giaBan = Convert.ToDouble(txtGiaBan.Text),
                     giaNhap = Convert.ToDouble(txtGiaNhap.Text),
-                    HinhAnh = FileName,
+                    HinhAnh = currentImg,
                     ghiChu = rtxtGhichu.Text,
                     Email = usingEmail
                 };
                 if (bus_sp.insert_SP(sp))
                 {
                     MessageBox.Show("Thêm thành công");
+                    File.Copy(fileAddress, fileSavePath, true); 
+                    setControls(false);
                     LoadGridView();
                     ClearInput();
                 }
@@ -130,6 +158,8 @@ namespace GUI_QLBanHang
 
         private void Ql_SanPham_Load(object sender, EventArgs e)
         {
+            setControls(false);
+            btnAddnew.Enabled = false;
             LoadGridView();
         }
 
@@ -144,13 +174,16 @@ namespace GUI_QLBanHang
                     SoLuong = Convert.ToInt16(txtSoluong.Text),
                     giaBan = Convert.ToDouble(txtGiaBan.Text),
                     giaNhap = Convert.ToDouble(txtGiaNhap.Text),
-                    HinhAnh = FileName,
+                    HinhAnh = currentImg,
                     ghiChu = rtxtGhichu.Text,
                     Email = usingEmail
                 };
                 if (bus_sp.update_SP(sp))
                 {
+                    if (currentImg != checkURl)
+                        File.Copy(fileAddress, fileSavePath, true); 
                     MessageBox.Show("Sửa thành công");
+                    setControls(false);
                     LoadGridView();
                     ClearInput();
                 }
@@ -176,7 +209,8 @@ namespace GUI_QLBanHang
                     {
                         MessageBox.Show("Xóa thành công");
                         LoadGridView();
-                        ClearInput() ;
+                        ClearInput();
+                        setControls(false); 
                     }
                 }
             }
@@ -188,6 +222,7 @@ namespace GUI_QLBanHang
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
@@ -198,15 +233,21 @@ namespace GUI_QLBanHang
                 txtGiaNhap.Text = selectedRow.Cells[4].Value.ToString();
                 rtxtGhichu.Text = selectedRow.Cells[5].Value.ToString();
 
-                FileName = bus_sp.getIMG(int.Parse(selectedRow.Cells[0].Value.ToString()));
-                if (FileName != "")
-                    pcbImg.Image = Image.FromFile(FileName);
-
+                currentImg = selectedRow.Cells[6].Value.ToString();
+                checkURl = currentImg;
+                if (selectedRow.Cells[6].Value.ToString() != "")
+                {
+                    string img = saveDirectory +   currentImg ;
+                    OpenImg(img);
+                }
+                setControls(true);
             }
         }
 
+        
         private void btnRefesh_Click(object sender, EventArgs e)
         {
+            setControls(false);
             ClearInput();
             LoadGridView();
         }
@@ -219,8 +260,14 @@ namespace GUI_QLBanHang
             dataGridView1.Columns[2].HeaderText = "Số lượng";
             dataGridView1.Columns[3].HeaderText = "Giá bán";
             dataGridView1.Columns[4].HeaderText = "Giá Nhập";
-            dataGridView1.Columns[5].HeaderText = "Ghi chú";
-            dataGridView1.Columns[4].HeaderText = "Mã Nhân viên";
+            dataGridView1.Columns[5].HeaderText = "Hình ảnh";
+            dataGridView1.Columns[6].HeaderText = "Ghi chú";
+            dataGridView1.Columns[7].HeaderText = "Mã Nhân viên";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnAddnew.Enabled = true;
         }
     }
 }

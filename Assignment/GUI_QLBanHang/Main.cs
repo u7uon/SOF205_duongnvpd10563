@@ -20,19 +20,8 @@ namespace GUI_QLBanHang
         }
         private BUS_NhanVien bus_nv = new BUS_NhanVien();
         private string usingEmail;
-        private bool isExistsForm(string frmName)
-        {
-            bool check = false;
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm.Name == frmName)
-                {
-                    check = true;
-                    break;
-                }
-            }
-            return check;
-        }
+        private bool isAdmin; 
+
         void ChangeForm(Form form)
         {
             form.TopLevel = false;
@@ -43,17 +32,7 @@ namespace GUI_QLBanHang
             panel1.Controls.Add(form);
             form.Show();
         }
-        private void activeForm(string frmName)
-        {
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm.Name == frmName)
-                {
-                    frm.Activate();
-                    break;
-                }
-            }
-        }
+
         private void LoggedIn(bool check)
         {
             menu_thongKe.Visible = check;
@@ -63,19 +42,18 @@ namespace GUI_QLBanHang
             if (!check)
             {
                 panel1.Controls.Clear();
+                panel1.BackgroundImage = Properties.Resources.
             }
             if (check) 
             {
-                menuNhanVien.Visible = bus_nv.GetVaiTro(usingEmail);
-                menu_thongKe.Visible = bus_nv.GetVaiTro(usingEmail);
+                menuNhanVien.Visible = isAdmin;
+                menu_thongKe.Visible = isAdmin;
             }
-           
-
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -88,6 +66,7 @@ namespace GUI_QLBanHang
                 if (frmlogin.getStatus)
                 {
                     usingEmail = frmlogin.getEmail;
+                    isAdmin = frmlogin.isAdmin;
                     LoggedIn(true);
                     frmlogin.Close();
                 }

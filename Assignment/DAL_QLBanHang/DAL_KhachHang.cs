@@ -60,6 +60,8 @@ namespace DAL_QLBanHang
                 cmd.Parameters.AddWithValue("@Ten", kh.TenKh);
                 cmd.Parameters.AddWithValue("@DiaChi", kh.DiaChi);
                 cmd.Parameters.AddWithValue("@GioiTinh", kh.gioiTinh);
+                cmd.Parameters.AddWithValue("@email", kh.email);
+
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

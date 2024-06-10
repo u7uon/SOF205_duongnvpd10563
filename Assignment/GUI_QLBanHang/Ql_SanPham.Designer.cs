@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnRefesh = new System.Windows.Forms.Button();
@@ -100,6 +101,7 @@
             this.pcbImg.Location = new System.Drawing.Point(764, 26);
             this.pcbImg.Name = "pcbImg";
             this.pcbImg.Size = new System.Drawing.Size(378, 178);
+            this.pcbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImg.TabIndex = 13;
             this.pcbImg.TabStop = false;
             // 
@@ -221,6 +223,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.btnSearch);
             this.groupBox4.Controls.Add(this.txtSearch);
             this.groupBox4.Controls.Add(this.btnRefesh);
@@ -235,10 +238,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Công cụ";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI_QLBanHang.Properties.Resources.drone;
+            this.button1.Location = new System.Drawing.Point(18, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 37);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.Image = global::GUI_QLBanHang.Properties.Resources.preference;
-            this.btnSearch.Location = new System.Drawing.Point(1055, 14);
+            this.btnSearch.Location = new System.Drawing.Point(1055, 21);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 40);
             this.btnSearch.TabIndex = 19;
@@ -248,7 +263,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(741, 15);
+            this.txtSearch.Location = new System.Drawing.Point(730, 21);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 39);
@@ -259,7 +274,7 @@
             this.btnRefesh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnRefesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnRefesh.Location = new System.Drawing.Point(527, 21);
+            this.btnRefesh.Location = new System.Drawing.Point(542, 21);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(100, 40);
             this.btnRefesh.TabIndex = 17;
@@ -272,7 +287,7 @@
             this.btnAddnew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnew.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnAddnew.Location = new System.Drawing.Point(73, 21);
+            this.btnAddnew.Location = new System.Drawing.Point(93, 21);
             this.btnAddnew.Name = "btnAddnew";
             this.btnAddnew.Size = new System.Drawing.Size(100, 40);
             this.btnAddnew.TabIndex = 14;
@@ -285,7 +300,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnDelete.Location = new System.Drawing.Point(379, 21);
+            this.btnDelete.Location = new System.Drawing.Point(394, 21);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 16;
@@ -298,7 +313,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnUpdate.Location = new System.Drawing.Point(225, 21);
+            this.btnUpdate.Location = new System.Drawing.Point(242, 21);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 40);
             this.btnUpdate.TabIndex = 15;
@@ -366,5 +381,6 @@
         private System.Windows.Forms.PictureBox pcbImg;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnImg;
+        private System.Windows.Forms.Button button1;
     }
 }

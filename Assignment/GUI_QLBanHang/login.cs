@@ -22,51 +22,58 @@ namespace GUI_QLBanHang
         }
 
         private bool successLogin = false;
-        public  string getEmail
+        public string getEmail
         {
-            get { return txtEmail.Text;  }
+            get { return txtEmail.Text; }
         }
-        public bool getStatus {
+        public bool getStatus
+        {
             get
             {
-                return successLogin;    
+                return successLogin;
             }
         }
-
         BUS_NhanVien bus_nv = new BUS_NhanVien();
-        public string RandomString(int size , bool lowerCase)
+        public bool isAdmin
+        {
+            get { return bus_nv.GetVaiTro(getEmail); }
+        }
+
+
+
+        public string RandomString(int size, bool lowerCase)
         {
             StringBuilder builder = new StringBuilder();
             Random random = new Random();
-            char cha; 
+            char cha;
             for (int i = 0; i < size; i++)
             {
-                cha = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble()  + 65 )));
+                cha = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
                 builder.Append(cha);
             }
             if (lowerCase)
                 return builder.ToString().ToLower();
             return builder.ToString();
         }
-        public int RandomNumber(int min ,  int max)
+        public int RandomNumber(int min, int max)
         {
-                Random rd = new Random();
+            Random rd = new Random();
             return rd.Next(min, max);
         }
-        public void SendMail (string mail , string matKhau) 
+        public void SendMail(string mail, string matKhau)
         {
             try
-            {  
+            {
 
                 MailMessage msg = new MailMessage();
                 msg.To.Add(mail);
                 msg.From = new MailAddress("duongvpd10563@gmail.com");
                 msg.Subject = "Chức năng quên mật khẩu";
-                msg.Body = "Mật khẩu mới của bạn là : " + matKhau; 
+                msg.Body = "Mật khẩu mới của bạn là : " + matKhau;
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com");
                 smtp.EnableSsl = true;
-                smtp.Port = 587; 
+                smtp.Port = 587;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Credentials = new NetworkCredential("duongnvpd10563@gmail.com", "jipazvuqvjhktwxi");
                 smtp.Send(msg);
@@ -84,41 +91,42 @@ namespace GUI_QLBanHang
         private void btnLogin_Click(object sender, EventArgs e)
         {
             BUS_NhanVien bus_nv = new BUS_NhanVien();
-            if (bus_nv.Login(txtEmail.Text,txtPass.Text)) {
-                successLogin = true ; 
+            if (bus_nv.Login(txtEmail.Text, txtPass.Text))
+            {
+                successLogin = true;
                 Close();
             }
             else
             {
-                MessageBox.Show("Sai"); 
-                successLogin = false ;
+                MessageBox.Show("Sai mật khẩu hoặc tài khoản");
+                successLogin = false;
             }
         }
 
         private void btnForgetPass_Click(object sender, EventArgs e)
         {
             string userEmail = txtEmail.Text.Trim();
-            if(userEmail  != "" )   
+            if (userEmail != "")
             {
-                if(bus_nv.checkEmaik(userEmail))
+                if (bus_nv.checkEmaik(userEmail))
                 {
                     StringBuilder sb = new StringBuilder();
-                    sb.Append(RandomString(5,true));
+                    sb.Append(RandomString(5, true));
                     sb.Append(RandomNumber(1000, 9999));
-                    sb.Append(RandomString(3,false));
+                    sb.Append(RandomString(3, false));
                     SendMail(userEmail, sb.ToString()); //Gửi mật khẩu mới tới mail người dùng
-                    
+
                     //Lưu mật khẩu mới vào database
-                    bus_nv.setNewPass(userEmail, sb.ToString() ) ;
+                    bus_nv.setNewPass(userEmail, sb.ToString());
                 }
                 else
                 {
-                    MessageBox.Show("Email không tôn tại"); 
+                    MessageBox.Show("Email không tôn tại");
                     txtEmail.Clear();
-                    txtEmail.Focus();   
+                    txtEmail.Focus();
                 }
             }
-            
+
         }
     }
 }

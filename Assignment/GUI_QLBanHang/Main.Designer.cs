@@ -74,7 +74,7 @@
             // 
             this.menu_login.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
             this.menu_login.Name = "menu_login";
-            this.menu_login.Size = new System.Drawing.Size(224, 26);
+            this.menu_login.Size = new System.Drawing.Size(181, 26);
             this.menu_login.Text = "Đăng Nhập";
             this.menu_login.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
@@ -82,7 +82,7 @@
             // 
             this.menu_Logout.Image = global::GUI_QLBanHang.Properties.Resources.arrow;
             this.menu_Logout.Name = "menu_Logout";
-            this.menu_Logout.Size = new System.Drawing.Size(224, 26);
+            this.menu_Logout.Size = new System.Drawing.Size(181, 26);
             this.menu_Logout.Text = "Đăng xuất";
             this.menu_Logout.Visible = false;
             this.menu_Logout.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
@@ -91,7 +91,7 @@
             // 
             this.menu_profile.Image = global::GUI_QLBanHang.Properties.Resources.preference;
             this.menu_profile.Name = "menu_profile";
-            this.menu_profile.Size = new System.Drawing.Size(224, 26);
+            this.menu_profile.Size = new System.Drawing.Size(181, 26);
             this.menu_profile.Text = "Đổi mật khẩu";
             this.menu_profile.Visible = false;
             this.menu_profile.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
@@ -99,7 +99,7 @@
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@
             // 
             this.menuNhanVien.Image = global::GUI_QLBanHang.Properties.Resources.man;
             this.menuNhanVien.Name = "menuNhanVien";
-            this.menuNhanVien.Size = new System.Drawing.Size(224, 26);
+            this.menuNhanVien.Size = new System.Drawing.Size(172, 26);
             this.menuNhanVien.Text = "Nhân viên";
             this.menuNhanVien.Click += new System.EventHandler(this.menuNhanVien_Click);
             // 
@@ -135,7 +135,7 @@
             // 
             this.MenuKhachhang.Image = global::GUI_QLBanHang.Properties.Resources.rating;
             this.MenuKhachhang.Name = "MenuKhachhang";
-            this.MenuKhachhang.Size = new System.Drawing.Size(224, 26);
+            this.MenuKhachhang.Size = new System.Drawing.Size(172, 26);
             this.MenuKhachhang.Text = "Khách Hàng";
             this.MenuKhachhang.Click += new System.EventHandler(this.MenuKhachhang_Click);
             // 
@@ -143,7 +143,7 @@
             // 
             this.MenuSanPham.Image = global::GUI_QLBanHang.Properties.Resources.box;
             this.MenuSanPham.Name = "MenuSanPham";
-            this.MenuSanPham.Size = new System.Drawing.Size(224, 26);
+            this.MenuSanPham.Size = new System.Drawing.Size(172, 26);
             this.MenuSanPham.Text = "Sản phẩm";
             this.MenuSanPham.Click += new System.EventHandler(this.MenuSanPham_Click);
             // 

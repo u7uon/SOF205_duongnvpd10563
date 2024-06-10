@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.txtSearch);
             this.groupBox4.Controls.Add(this.btnRefesh);
@@ -124,7 +126,7 @@
             this.btnAddnew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnew.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnAddnew.Location = new System.Drawing.Point(73, 21);
+            this.btnAddnew.Location = new System.Drawing.Point(90, 21);
             this.btnAddnew.Name = "btnAddnew";
             this.btnAddnew.Size = new System.Drawing.Size(100, 40);
             this.btnAddnew.TabIndex = 14;
@@ -215,7 +217,7 @@
             // 
             // txtSdt
             // 
-            this.txtSdt.Location = new System.Drawing.Point(162, 66);
+            this.txtSdt.Location = new System.Drawing.Point(176, 66);
             this.txtSdt.Multiline = true;
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(386, 38);
@@ -223,7 +225,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(162, 12);
+            this.txtName.Location = new System.Drawing.Point(176, 12);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(386, 39);
@@ -253,9 +255,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-1, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 25);
+            this.label1.Size = new System.Drawing.Size(178, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên Khách hàng :";
+            this.label1.Text = "Tên Khách hàng ";
             // 
             // dataGridView1
             // 
@@ -268,6 +270,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(1181, 424);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI_QLBanHang.Properties.Resources.drone;
+            this.button1.Location = new System.Drawing.Point(11, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 37);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // QL_KhachHang
             // 
@@ -312,5 +326,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,7 +22,7 @@ namespace GUI_QLBanHang
             InitializeComponent();
         }
         BUS_NhanVien bus_nv = new BUS_NhanVien();
-        
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -31,6 +32,18 @@ namespace GUI_QLBanHang
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+        private bool isValidEmail(string email)
+        {
+            try
+            {
+                MailAddress mail = new MailAddress(email);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
         private void clearInput()
         {
@@ -44,6 +57,26 @@ namespace GUI_QLBanHang
             txtName.Focus();
             txtEmail.Enabled = true;
         }
+        private void setControls(bool check)
+        {
+            btnAddnew.Enabled = check;
+            btnDelete.Enabled = check;
+            btnUpdate.Enabled = check;
+            txtEmail.Enabled = !check;
+        }
+        private void Load_Gridview()
+        {
+            dataGridView1.Columns[0].HeaderText = "Email";
+            dataGridView1.Columns[1].HeaderText = "Tên Nhân Viên";
+            dataGridView1.Columns[2].HeaderText = "Địa chỉ";
+            dataGridView1.Columns[3].HeaderText = "Vai trò";
+            dataGridView1.Columns[4].HeaderText = "Tình trạng";
+        }
+        private void LoadData() 
+        {
+            dataGridView1.DataSource = bus_nv.LoadData_NV();
+            Load_Gridview(); 
+        }
 
         private bool nullInput()
         {
@@ -53,31 +86,29 @@ namespace GUI_QLBanHang
         {
             if (!nullInput())
             {
-                int role = rdoManager.Checked ? 1 : 0;
-                int status = rdoActive.Checked ? 1 : 0;
-                DTO_NhanVien nv = new DTO_NhanVien(txtEmail.Text, txtName.Text, txtAddress.Text, role, status);
-                BUS_NhanVien bUS_NhanVien = new BUS_NhanVien();
-                if (bUS_NhanVien.insert_nv(nv))
+                if (isValidEmail(txtEmail.Text))
                 {
-                    MessageBox.Show("Thêm thành công");
-                    Load_Gridview();
-                    clearInput();
+                    int role = rdoManager.Checked ? 1 : 0;
+                    int status = rdoActive.Checked ? 1 : 0;
+                    DTO_NhanVien nv = new DTO_NhanVien(txtEmail.Text, txtName.Text, txtAddress.Text, role, status);
+                    BUS_NhanVien bUS_NhanVien = new BUS_NhanVien();
+                    if (bUS_NhanVien.insert_nv(nv))
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        setControls(false);
+                        LoadData();
+                        clearInput();
+                    }
                 }
+                else
+                    MessageBox.Show("Email không đúng định dạng"); 
             }
             else
             {
                 MessageBox.Show("Nhập các trường thông tin trước khi thêm");
             }
         }
-        void Load_Gridview()
-        {
-            dataGridView1.DataSource = bus_nv.LoadData_NV();
-            dataGridView1.Columns[0].HeaderText = "Email";
-            dataGridView1.Columns[1].HeaderText = "Tên Nhân Viên";
-            dataGridView1.Columns[2].HeaderText = "Địa chỉ";
-            dataGridView1.Columns[3].HeaderText = "Vai trò";
-            dataGridView1.Columns[4].HeaderText = "Tình trạng";
-        }
+
         private void resetValues()
         {
 
@@ -85,7 +116,7 @@ namespace GUI_QLBanHang
 
         private void QL_NhanVien_Load(object sender, EventArgs e)
         {
-            Load_Gridview();
+            LoadData(); 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -99,7 +130,8 @@ namespace GUI_QLBanHang
                     if (bus_nv.delete_NV(email))
                     {
                         MessageBox.Show("Xóa thành công");
-                        Load_Gridview();
+                        setControls(false);
+                        LoadData() ;
                         clearInput();
                     }
                 }
@@ -123,8 +155,9 @@ namespace GUI_QLBanHang
                     if (bus_nv.update_NV(nv))
                     {
                         MessageBox.Show("Cập nhật thành công");
-                        Load_Gridview();
-                        clearInput() ;
+                        setControls(false );
+                        LoadData();
+                        clearInput();
                     }
                 }
             }
@@ -137,42 +170,47 @@ namespace GUI_QLBanHang
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             clearInput();
-            Load_Gridview(); 
+            setControls(false);
+            LoadData();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bus_nv.search_NV(txtSearch.Text);
-            dataGridView1.Columns[0].HeaderText = "Email";
-            dataGridView1.Columns[1].HeaderText = "Tên Nhân Viên";
-            dataGridView1.Columns[2].HeaderText = "Địa chỉ";
-            dataGridView1.Columns[3].HeaderText = "Vai trò";
-            dataGridView1.Columns[4].HeaderText = "Tình trạng";
-
+            Load_Gridview();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
+                setControls(true);
+                btnAddnew.Enabled = false;
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 txtEmail.Text = row.Cells[0].Value.ToString();
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtAddress.Text = row.Cells[2].Value.ToString();
-                if(Convert.ToInt16(row.Cells[3].Value.ToString()) == 0) 
+                if (Convert.ToInt16(row.Cells[3].Value.ToString()) == 0)
                     rdoStaff.Checked = true;
-                else 
+                else
                     rdoManager.Checked = true;
-                if (Convert.ToInt16(row.Cells[4].Value.ToString()) == 0) 
+                if (Convert.ToInt16(row.Cells[4].Value.ToString()) == 0)
                     rdoUnactive.Checked = true;
-                else 
+                else
                     rdoActive.Checked = true;
-                txtEmail.Enabled = false;
             }
         }
 
         private void txtAddress_ImeChange(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnAddnew.Enabled = true;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            txtEmail.Enabled = true; 
         }
     }
 }

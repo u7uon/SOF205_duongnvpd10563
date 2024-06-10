@@ -51,6 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -79,6 +80,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.txtSearch);
             this.groupBox4.Controls.Add(this.btnRefesh);
@@ -117,7 +119,7 @@
             this.btnRefesh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnRefesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnRefesh.Location = new System.Drawing.Point(527, 21);
+            this.btnRefesh.Location = new System.Drawing.Point(544, 21);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(100, 40);
             this.btnRefesh.TabIndex = 17;
@@ -130,7 +132,7 @@
             this.btnAddnew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddnew.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnAddnew.Location = new System.Drawing.Point(73, 21);
+            this.btnAddnew.Location = new System.Drawing.Point(123, 21);
             this.btnAddnew.Name = "btnAddnew";
             this.btnAddnew.Size = new System.Drawing.Size(100, 40);
             this.btnAddnew.TabIndex = 14;
@@ -143,7 +145,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnDelete.Location = new System.Drawing.Point(379, 21);
+            this.btnDelete.Location = new System.Drawing.Point(401, 21);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 16;
@@ -156,7 +158,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Image = global::GUI_QLBanHang.Properties.Resources.password_code;
-            this.btnUpdate.Location = new System.Drawing.Point(225, 21);
+            this.btnUpdate.Location = new System.Drawing.Point(265, 21);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 40);
             this.btnUpdate.TabIndex = 15;
@@ -323,6 +325,18 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI_QLBanHang.Properties.Resources.drone;
+            this.button1.Location = new System.Drawing.Point(38, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 37);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // QL_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,5 +386,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

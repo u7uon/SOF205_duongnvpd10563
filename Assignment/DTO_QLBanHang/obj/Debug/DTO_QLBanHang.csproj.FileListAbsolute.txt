@@ -4,3 +4,9 @@ C:\Users\pc\source\repos\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.csproj
 C:\Users\pc\source\repos\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.csproj.CoreCompileInputs.cache
 C:\Users\pc\source\repos\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.dll
 C:\Users\pc\source\repos\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.pdb
+D:\Assignment\Assignment\DTO_QLBanHang\bin\Debug\DTO_QLBanHang.dll
+D:\Assignment\Assignment\DTO_QLBanHang\bin\Debug\DTO_QLBanHang.pdb
+D:\Assignment\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.csproj.AssemblyReference.cache
+D:\Assignment\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.csproj.CoreCompileInputs.cache
+D:\Assignment\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.dll
+D:\Assignment\Assignment\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.pdb
