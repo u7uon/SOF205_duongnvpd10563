@@ -66,7 +66,7 @@ alter proc LoadSanPham
 as
 begin 
 	select maSP , TenSP , SoLuong ,
-	GiaBan ,GiaNhap , ghiChu , maNV  from SanPham
+	GiaBan ,GiaNhap , ghiChu ,HinhAnh, maNV  from SanPham
 end 
 
 
@@ -97,11 +97,13 @@ begin
 end 
 
 --Cập nhật sản phẩm 
-create proc update_SP 
- @maSP int , @tenSp nvarchar(50) , @soLuong int  , @giaBan float , @giaNhap float ,@hinhAnh varchar(400) ,@ghiChu nvarchar(50) 
+alter proc update_SP 
+ @maSP int , @tenSp nvarchar(50) , @soLuong int  , @giaBan float , @giaNhap float ,@hinhAnh varchar(400) ,@ghiChu nvarchar(50) , @email varchar(50) 
 as
 begin
-	update SanPham   set TenSP =@tenSp ,SoLuong = @soLuong , GiaBan = @giaBan ,GiaNhap =@giaNhap , HinhAnh = @hinhAnh , ghiChu =@ghiChu 
+	declare @maNV varchar(20) 
+	select @maNV  = MaNV from NhanVien where email= @email
+	update SanPham   set TenSP =@tenSp ,SoLuong = @soLuong , GiaBan = @giaBan ,GiaNhap =@giaNhap , HinhAnh = @hinhAnh , ghiChu =@ghiChu , maNV = @maNV
 	where maSP = @maSP 
 end 
 
@@ -195,15 +197,17 @@ begin
 end
 
 
-
-create proc update_KH
+alter proc update_KH
 	@Dienthoai varchar(15) ,
 	@Ten nvarchar(50) ,
 	@DiaChi nvarchar(50) ,
-	@GioiTinh nvarchar(5)
+	@GioiTinh nvarchar(5),
+	@email varchar(50) 
 as
 begin
-	Update KhachHang set TenKH = @Ten , DiaChi = @DiaChi , GioiTinh =@GioiTinh
+	declare @maNV varchar(20) 
+	select @maNV  = MaNV from NhanVien where email= @email
+	Update KhachHang set TenKH = @Ten , DiaChi = @DiaChi , GioiTinh =@GioiTinh , maNV = @maNV
 	where DienThoai = @Dienthoai 
 
 end 
