@@ -109,6 +109,7 @@
             this.menu_HuonDan.Name = "menu_HuonDan";
             this.menu_HuonDan.Size = new System.Drawing.Size(118, 24);
             this.menu_HuonDan.Text = "Hướng dẫn";
+            this.menu_HuonDan.Click += new System.EventHandler(this.menu_HuonDan_Click);
             // 
             // menu_danhmuc
             // 

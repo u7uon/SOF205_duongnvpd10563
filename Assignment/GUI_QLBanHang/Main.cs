@@ -121,5 +121,10 @@ namespace GUI_QLBanHang
         {
 
         }
+
+        private void menu_HuonDan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Ql_SanPham.resx">
       <DependentUpon>Ql_SanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKecs.resx">
+      <DependentUpon>ThongKecs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
