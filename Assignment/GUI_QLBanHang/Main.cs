@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -39,10 +40,11 @@ namespace GUI_QLBanHang
             menu_danhmuc.Visible = check;
             menu_login.Enabled = !check;
             menu_Logout.Visible = check;
+            menu_profile.Visible = check;
             if (!check)
             {
                 panel1.Controls.Clear();
-                panel1.BackgroundImage = Properties.Resources.
+                
             }
             if (check) 
             {
@@ -124,7 +126,8 @@ namespace GUI_QLBanHang
 
         private void menu_HuonDan_Click(object sender, EventArgs e)
         {
-
+            string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+            Process.Start(saveDirectory+"/Doc/HuongDanSuDung.txt");
         }
     }
 }

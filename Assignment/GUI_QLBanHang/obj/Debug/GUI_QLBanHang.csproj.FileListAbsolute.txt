@@ -43,3 +43,4 @@ D:\Assignment\Assignment\GUI_QLBanHang\obj\Debug\GUI_QLBanHang.csproj.CoreCompil
 D:\Assignment\Assignment\GUI_QLBanHang\obj\Debug\GUI_QLBa.12D288D4.Up2Date
 D:\Assignment\Assignment\GUI_QLBanHang\obj\Debug\GUI_QLBanHang.exe
 D:\Assignment\Assignment\GUI_QLBanHang\obj\Debug\GUI_QLBanHang.pdb
+D:\Assignment\Assignment\GUI_QLBanHang\obj\Debug\GUI_QLBanHang.ThongKecs.resources

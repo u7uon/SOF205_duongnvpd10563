@@ -32,9 +32,15 @@ namespace BUS_QLBanHang
         {
             return dal_sp.search_SP(tenSP);
         }
-        public string getIMG(int id)
+        public DataTable thongke_sp()
         {
-            return dal_sp.getImg(id);
+            return dal_sp.thongKeSP();
         }
+        public DataTable thongketonkho()
+        {
+            return dal_sp.thongKeTonKho();
+        }
+
+
     }
 }

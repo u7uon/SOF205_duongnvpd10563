@@ -161,5 +161,48 @@ namespace DAL_QLBanHang
                 _conn.Close();
             }
         }
+        public DataTable thongKeSP()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "Thong_Sp";
+                DataTable data = new DataTable();
+                data.Load(cmd.ExecuteReader());
+                return data;
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+
+        // thông kê
+        public DataTable thongKeTonKho()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ThongKe_TonKho";
+                DataTable data = new DataTable();
+                data.Load(cmd.ExecuteReader());
+                return data;
+
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

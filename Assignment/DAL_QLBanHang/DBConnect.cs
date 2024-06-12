@@ -9,6 +9,6 @@ namespace DAL_QLBanHang
 {
     public class DBConnect
     {
-        protected SqlConnection _conn = new SqlConnection(@"Data Source=U7;Initial Catalog=QuanLyBanHangg;Integrated Security=True;Encrypt=False    ");
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=U7;Initial Catalog=QuanLyBanHang;Integrated Security=True;Encrypt=False");
     }
 }

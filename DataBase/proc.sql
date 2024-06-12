@@ -1,4 +1,4 @@
-﻿use QuanLyBanHangg 
+﻿use QuanLyBanHang
 go 
 
 --đăng nhập
@@ -62,7 +62,7 @@ begin
 end
 
 -- Tải data sản phẩm lên
-alter proc LoadSanPham 
+create proc LoadSanPham 
 as
 begin 
 	select maSP , TenSP , SoLuong ,
@@ -97,7 +97,7 @@ begin
 end 
 
 --Cập nhật sản phẩm 
-alter proc update_SP 
+create proc update_SP 
  @maSP int , @tenSp nvarchar(50) , @soLuong int  , @giaBan float , @giaNhap float ,@hinhAnh varchar(400) ,@ghiChu nvarchar(50) , @email varchar(50) 
 as
 begin
@@ -126,7 +126,7 @@ end
 
 
 --Thêm Nhân viên 
-alter proc insert_NV 
+create proc insert_NV 
 	@email varchar(50) ,
 	@ten nvarchar(50) ,
 	@diaChi nvarchar(400) ,
@@ -197,7 +197,7 @@ begin
 end
 
 
-alter proc update_KH
+create proc update_KH
 	@Dienthoai varchar(15) ,
 	@Ten nvarchar(50) ,
 	@DiaChi nvarchar(50) ,
@@ -248,7 +248,7 @@ end
 create proc Thong_Sp 
 as
 begin 
-	select SanPham.maNV , tenNV , Count(maNV) from SanPham inner join NhanVien
+	select SanPham.maNV , tenNV , Count(tenNV) from SanPham inner join NhanVien
 	on SanPham.maNV = NhanVien.maNV
 	group by SanPham.maNV ,tenNV
 end

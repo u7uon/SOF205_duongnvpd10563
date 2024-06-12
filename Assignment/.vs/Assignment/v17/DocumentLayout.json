@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Assignment\\Assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\thongkecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\thongkecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|D:\\Assignment\\Assignment\\gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\ql_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\ql_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\ql_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\ql_sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ThongKecs.cs [Design]",
-              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\ThongKecs.cs",
-              "RelativeDocumentMoniker": "GUI_QLBanHang\\ThongKecs.cs",
-              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\ThongKecs.cs [Design]",
-              "RelativeToolTip": "GUI_QLBanHang\\ThongKecs.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "Ql_SanPham.cs",
+              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Ql_SanPham.cs",
+              "RelativeDocumentMoniker": "GUI_QLBanHang\\Ql_SanPham.cs",
+              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Ql_SanPham.cs",
+              "RelativeToolTip": "GUI_QLBanHang\\Ql_SanPham.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAiwEcAAABxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T08:54:05.253Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main.cs",
-              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
-              "RelativeDocumentMoniker": "GUI_QLBanHang\\Main.cs",
-              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
-              "RelativeToolTip": "GUI_QLBanHang\\Main.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAA+wH4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T08:53:58.603Z",
+              "WhenOpened": "2024-06-12T09:25:54.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Ql_SanPham.cs [Design]",
+              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Ql_SanPham.cs",
+              "RelativeDocumentMoniker": "GUI_QLBanHang\\Ql_SanPham.cs",
+              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Ql_SanPham.cs [Design]",
+              "RelativeToolTip": "GUI_QLBanHang\\Ql_SanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:25:53.242Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
               "RelativeDocumentMoniker": "GUI_QLBanHang\\Main.cs",
               "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs [Design]",
               "RelativeToolTip": "GUI_QLBanHang\\Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T08:53:53.975Z",
+              "WhenOpened": "2024-06-12T09:25:34.406Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
+              "RelativeDocumentMoniker": "GUI_QLBanHang\\Main.cs",
+              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
+              "RelativeToolTip": "GUI_QLBanHang\\Main.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAADwv10AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T08:53:58.603Z",
+              "EditorCaption": ""
             }
           ]
         }

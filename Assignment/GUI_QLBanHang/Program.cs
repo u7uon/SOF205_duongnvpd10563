@@ -16,7 +16,7 @@ namespace GUI_QLBanHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QL_NhanVien() );
+            Application.Run(new frmMain() );
         }
     }
 }
