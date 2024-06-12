@@ -113,6 +113,16 @@ namespace GUI_QLBanHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fpt {
+            get {
+                object obj = ResourceManager.GetObject("fpt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap locks {
             get {
                 object obj = ResourceManager.GetObject("locks", resourceCulture);
@@ -173,6 +183,16 @@ namespace GUI_QLBanHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_05_10_213659 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-05-10 213659", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap security {
             get {
                 object obj = ResourceManager.GetObject("security", resourceCulture);
@@ -186,6 +206,16 @@ namespace GUI_QLBanHang.Properties {
         internal static System.Drawing.Bitmap statistical {
             get {
                 object obj = ResourceManager.GetObject("statistical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x18198154_10208600482868814_3469513_n_png_pagespeed_ic__4_CcyctRxZ {
+            get {
+                object obj = ResourceManager.GetObject("x18198154_10208600482868814_3469513_n.png.pagespeed.ic_.4_CcyctRxZ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

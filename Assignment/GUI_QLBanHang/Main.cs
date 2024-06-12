@@ -44,7 +44,6 @@ namespace GUI_QLBanHang
             if (!check)
             {
                 panel1.Controls.Clear();
-                
             }
             if (check) 
             {
@@ -55,7 +54,7 @@ namespace GUI_QLBanHang
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
 
@@ -93,7 +92,6 @@ namespace GUI_QLBanHang
                 {
                     frmDoiMk.Close();
                     LoggedIn(false);
-
                 }
             }
         }
@@ -128,6 +126,11 @@ namespace GUI_QLBanHang
         {
             string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
             Process.Start(saveDirectory+"/Doc/HuongDanSuDung.txt");
+        }
+
+        private void menu_thongKe_Click(object sender, EventArgs e)
+        {
+            ChangeForm(new ThongKecs());
         }
     }
 }

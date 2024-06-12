@@ -186,5 +186,14 @@
   <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-05-10 213659.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x18198154_10208600482868814_3469513_n.png.pagespeed.ic_.4_CcyctRxZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fpt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,69 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Assignment\\Assignment\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|d:\\assignment\\assignment\\gui_qlbanhang\\ql_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB4C9BEC-0C8A-41C6-B45B-90E44498C406}|GUI_QLBanHang\\GUI_QLBanHang.csproj|solutionrelative:gui_qlbanhang\\ql_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QL_KhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\QL_KhachHang.cs",
+              "RelativeDocumentMoniker": "GUI_QLBanHang\\QL_KhachHang.cs",
+              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\QL_KhachHang.cs [Design]",
+              "RelativeToolTip": "GUI_QLBanHang\\QL_KhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T16:10:03.197Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
+              "RelativeDocumentMoniker": "GUI_QLBanHang\\Main.cs",
+              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
+              "RelativeToolTip": "GUI_QLBanHang\\Main.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAIAwwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T16:03:27.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs",
+              "RelativeDocumentMoniker": "GUI_QLBanHang\\Main.cs",
+              "ToolTip": "D:\\Assignment\\Assignment\\GUI_QLBanHang\\Main.cs [Design]",
+              "RelativeToolTip": "GUI_QLBanHang\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T16:01:57.472Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
