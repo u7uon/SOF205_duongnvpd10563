@@ -1,0 +1,9 @@
+D:\Assignment\Assignment\DAL_QLBanHang\bin\Release\DAL_QLBanHang.dll
+D:\Assignment\Assignment\DAL_QLBanHang\bin\Release\DAL_QLBanHang.pdb
+D:\Assignment\Assignment\DAL_QLBanHang\bin\Release\DTO_QLBanHang.dll
+D:\Assignment\Assignment\DAL_QLBanHang\bin\Release\DTO_QLBanHang.pdb
+D:\Assignment\Assignment\DAL_QLBanHang\obj\Release\DAL_QLBanHang.csproj.AssemblyReference.cache
+D:\Assignment\Assignment\DAL_QLBanHang\obj\Release\DAL_QLBanHang.csproj.CoreCompileInputs.cache
+D:\Assignment\Assignment\DAL_QLBanHang\obj\Release\DAL_QLBa.95D121C7.Up2Date
+D:\Assignment\Assignment\DAL_QLBanHang\obj\Release\DAL_QLBanHang.dll
+D:\Assignment\Assignment\DAL_QLBanHang\obj\Release\DAL_QLBanHang.pdb

@@ -71,7 +71,7 @@ namespace GUI_QLBanHang
                     isAdmin = frmlogin.isAdmin;
                     LoggedIn(true);
                     frmlogin.Close();
-                }
+                }  
             }
         }
 

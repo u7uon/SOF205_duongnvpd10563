@@ -94,11 +94,14 @@ namespace GUI_QLBanHang
             if (bus_nv.Login(txtEmail.Text, txtPass.Text))
             {
                 successLogin = true;
+                MessageBox.Show("Chào  mừng " + txtEmail.Text, "Đăng nhập thành công");
                 Close();
             }
             else
             {
                 MessageBox.Show("Sai mật khẩu hoặc tài khoản");
+                txtPass.Text = "";
+                txtEmail.Focus();
                 successLogin = false;
             }
         }
@@ -125,6 +128,11 @@ namespace GUI_QLBanHang
                     txtEmail.Clear();
                     txtEmail.Focus();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập email ");
+                txtEmail.Focus();
             }
 
         }
