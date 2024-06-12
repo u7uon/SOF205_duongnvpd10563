@@ -235,3 +235,20 @@ as
 begin
 	select * from KhachHang
 end
+
+
+create proc ThongKe_TonKho
+as
+	
+begin 
+	select TenSP , SUm(Soluong) from SanPham
+	group by TenSP 
+end	
+
+create proc Thong_Sp 
+as
+begin 
+	select SanPham.maNV , tenNV , Count(maNV) from SanPham inner join NhanVien
+	on SanPham.maNV = NhanVien.maNV
+	group by SanPham.maNV ,tenNVs
+end
