@@ -104,6 +104,7 @@ namespace DTO_QLBanHang
             this.VaiTro = VaiTro;
             this.TinhTrang = tinhTrang;
         }
+        public DTO_NhanVien() { }
         #endregion
     }
 }

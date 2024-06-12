@@ -250,5 +250,5 @@ as
 begin 
 	select SanPham.maNV , tenNV , Count(maNV) from SanPham inner join NhanVien
 	on SanPham.maNV = NhanVien.maNV
-	group by SanPham.maNV ,tenNVs
+	group by SanPham.maNV ,tenNV
 end
