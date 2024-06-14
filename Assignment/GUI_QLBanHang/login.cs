@@ -96,7 +96,7 @@ namespace GUI_QLBanHang
                 if (bus_nv.Login(txtEmail.Text, txtPass.Text))
                 {
                     successLogin = true;
-                    MessageBox.Show("Chào  mừng " + txtEmail.Text, "Đăng nhập thành công");
+                    MessageBox.Show("Chào mừng " + txtEmail.Text, "Đăng nhập thành công");
                     Close();
                 }
                 else

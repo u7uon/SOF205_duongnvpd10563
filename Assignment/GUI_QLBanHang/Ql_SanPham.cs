@@ -50,7 +50,7 @@ namespace GUI_QLBanHang
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message); 
+                MessageBox.Show("Không thể mở hình ảnh"); 
             }
         }
 
@@ -69,7 +69,7 @@ namespace GUI_QLBanHang
                 fileAddress = open.FileName;
                 OpenImg(fileAddress);
                 FileName = Path.GetFileName(open.FileName);
-                string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+                string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length);
                 fileSavePath = saveDirectory + "\\Images\\" + FileName;
                 currentImg = "\\Images\\" + FileName ;
             }
@@ -146,7 +146,6 @@ namespace GUI_QLBanHang
                 e.Handled = true;
             }
         }
-
         private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Chỉ cho nhập số vào các text box này
@@ -155,7 +154,6 @@ namespace GUI_QLBanHang
                 e.Handled = true;
             }
         }
-
         private void Ql_SanPham_Load(object sender, EventArgs e)
         {
             setControls(false);
@@ -222,7 +220,7 @@ namespace GUI_QLBanHang
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+            string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length);
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
@@ -237,7 +235,7 @@ namespace GUI_QLBanHang
                 checkURl = currentImg;
                 if (selectedRow.Cells[6].Value.ToString() != "")
                 {
-                    string img = saveDirectory +   currentImg ;
+                    string img = saveDirectory + currentImg ;
                     OpenImg(img);
                 }
                 setControls(true);
