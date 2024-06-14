@@ -21,7 +21,7 @@ namespace GUI_QLBanHang
         }
         private BUS_NhanVien bus_nv = new BUS_NhanVien();
         private string usingEmail;
-        private bool isAdmin; 
+        private bool isAdmin;
 
         void ChangeForm(Form form)
         {
@@ -45,7 +45,7 @@ namespace GUI_QLBanHang
             {
                 panel1.Controls.Clear();
             }
-            if (check) 
+            if (check)
             {
                 menuNhanVien.Visible = isAdmin;
                 menu_thongKe.Visible = isAdmin;
@@ -54,7 +54,7 @@ namespace GUI_QLBanHang
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-           
+
         }
 
 
@@ -70,7 +70,7 @@ namespace GUI_QLBanHang
                     isAdmin = frmlogin.isAdmin;
                     LoggedIn(true);
                     frmlogin.Close();
-                }  
+                }
             }
         }
 
@@ -114,7 +114,9 @@ namespace GUI_QLBanHang
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có muốn đóng chương trình", "Cảnh báo", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+                Application.Exit();
         }
 
         private void menu_danhmuc_Click(object sender, EventArgs e)
@@ -124,8 +126,9 @@ namespace GUI_QLBanHang
 
         private void menu_HuonDan_Click(object sender, EventArgs e)
         {
-            string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
-            Process.Start(saveDirectory+"/Doc/HuongDanSuDung.txt");
+            //string saveDirectory = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+            //Process.Start(saveDirectory+ "/Doc/HuongDanSuDung.txt");
+            Process.Start("HuongDanSuDung.txt");
         }
 
         private void menu_thongKe_Click(object sender, EventArgs e)

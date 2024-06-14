@@ -91,18 +91,26 @@ namespace GUI_QLBanHang
         private void btnLogin_Click(object sender, EventArgs e)
         {
             BUS_NhanVien bus_nv = new BUS_NhanVien();
-            if (bus_nv.Login(txtEmail.Text, txtPass.Text))
+            if (txtEmail.Text != "" || txtPass.Text != "")
             {
-                successLogin = true;
-                MessageBox.Show("Chào  mừng " + txtEmail.Text, "Đăng nhập thành công");
-                Close();
+                if (bus_nv.Login(txtEmail.Text, txtPass.Text))
+                {
+                    successLogin = true;
+                    MessageBox.Show("Chào  mừng " + txtEmail.Text, "Đăng nhập thành công");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Sai mật khẩu hoặc tài khoản");
+                    txtPass.Text = "";
+                    txtEmail.Focus();
+                    successLogin = false;
+                }
             }
             else
             {
-                MessageBox.Show("Sai mật khẩu hoặc tài khoản");
-                txtPass.Text = "";
+                MessageBox.Show("Vui lòng nhập thông tin đăng nhập");
                 txtEmail.Focus();
-                successLogin = false;
             }
         }
 

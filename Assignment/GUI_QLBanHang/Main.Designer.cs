@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_login = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Logout = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +41,7 @@
             this.MenuKhachhang = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSanPham = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_thongKe = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,17 +60,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1219, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.BackgroundImage = global::GUI_QLBanHang.Properties.Resources.fpt;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 31);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1216, 761);
-            this.panel1.TabIndex = 1;
             // 
             // toolStripMenuItem1
             // 
@@ -171,11 +160,22 @@
             this.menu_thongKe.Visible = false;
             this.menu_thongKe.Click += new System.EventHandler(this.menu_thongKe_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BackgroundImage = global::GUI_QLBanHang.Properties.Resources.fpt;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 31);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1216, 761);
+            this.panel1.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(306, 22);
+            this.label1.Location = new System.Drawing.Point(274, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(668, 25);
             this.label1.TabIndex = 0;
@@ -191,7 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "Main";
+            this.Text = "Quản lý bán hàng";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

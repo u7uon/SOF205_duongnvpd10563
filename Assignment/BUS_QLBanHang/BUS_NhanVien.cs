@@ -14,7 +14,7 @@ namespace BUS_QLBanHang
 {
     public class BUS_NhanVien
     {
-        private   DAL_NhanVien dal_nv = new DAL_NhanVien();
+        private DAL_NhanVien dal_nv = new DAL_NhanVien();
         private string encrytion(string password)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
@@ -40,7 +40,7 @@ namespace BUS_QLBanHang
             }
             return builder.ToString();
         }
-        private void sendMail(string recieverMail , string Pass)
+        private void sendMail(string recieverMail, string Pass)
         {
             MailMessage msg = new MailMessage();
             msg.To.Add(recieverMail);
@@ -62,6 +62,7 @@ namespace BUS_QLBanHang
         }
         public bool Login(string email, string password)
         {
+
             return dal_nv.Login(email, encrytion(password));
         }
         public bool checkEmaik(string email)
@@ -70,15 +71,15 @@ namespace BUS_QLBanHang
         }
         public bool setNewPass(string email, string password)
         {
-            return dal_nv.SetNewPass(email, encrytion(password) );
+            return dal_nv.SetNewPass(email, encrytion(password));
         }
-        public DataTable LoadData_NV ()
+        public DataTable LoadData_NV()
         {
             return dal_nv.Load_NhanVien();
         }
-        public bool insert_nv (DTO_NhanVien nv )
+        public bool insert_nv(DTO_NhanVien nv)
         {
-            string randomPass = newPassword(); 
+            string randomPass = newPassword();
             nv.matKhau = encrytion(randomPass);
             if (dal_nv.insert_NV(nv))
             {

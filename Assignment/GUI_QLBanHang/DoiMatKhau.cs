@@ -35,9 +35,12 @@ namespace GUI_QLBanHang
                         status = true;
                         MessageBox.Show("Đổi mật khẩu thành công , vui lòng đăng nhập lại");
                         this.Close();
-
                     }
+                    else
+                        MessageBox.Show("Đôi mật khẩu thất bại , vui lòng thử lại");
                 }
+                else
+                    MessageBox.Show("Sai mật khẩu cũ ");
             }
             else
                 MessageBox.Show("Mật khẩu mới và mật khẩu xác nhận không trùng");

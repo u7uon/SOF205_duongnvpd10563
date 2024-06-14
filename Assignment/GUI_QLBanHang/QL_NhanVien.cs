@@ -80,7 +80,7 @@ namespace GUI_QLBanHang
 
         private bool nullInput()
         {
-            return txtAddress == null || txtEmail == null || txtName == null || rdoActive.Checked == false && rdoUnactive.Checked == false || rdoManager.Checked == false && rdoStaff.Checked == false;
+            return txtAddress.Text == "" || txtEmail.Text == "" || txtName.Text == "" || rdoActive.Checked == false && rdoUnactive.Checked == false || rdoManager.Checked == false && rdoStaff.Checked == false;
         }
         private void btnAddnew_Click(object sender, EventArgs e)
         {
@@ -155,10 +155,12 @@ namespace GUI_QLBanHang
                     if (bus_nv.update_NV(nv))
                     {
                         MessageBox.Show("Cập nhật thành công");
-                        setControls(false );
+                        setControls(false);
                         LoadData();
                         clearInput();
                     }
+                    else
+                        MessageBox.Show("Thêm thất bại , vui lòng thử lại");
                 }
             }
             else

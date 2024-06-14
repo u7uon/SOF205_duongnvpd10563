@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,9 @@ namespace DAL_QLBanHang
 {
     public class DAL_NhanVien : DBConnect
     {
+
+ 
+
         public bool Login(string email, string pwd)
         {
             try
@@ -153,7 +157,8 @@ namespace DAL_QLBanHang
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex);
             }
             finally
@@ -177,7 +182,7 @@ namespace DAL_QLBanHang
             }
             finally { _conn.Close(); }
         }
-        public DataTable Search_NV(string name ="")
+        public DataTable Search_NV(string name = "")
         {
             try
             {
@@ -186,13 +191,13 @@ namespace DAL_QLBanHang
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "search_NV"; 
-                cmd.Parameters.AddWithValue ("tenNV", name);
+                cmd.CommandText = "search_NV";
+                cmd.Parameters.AddWithValue("tenNV", name);
 
                 DataTable data_nv = new DataTable();
                 data_nv.Load(cmd.ExecuteReader());
 
-                return data_nv; 
+                return data_nv;
             }
             finally
             {
@@ -203,14 +208,14 @@ namespace DAL_QLBanHang
         {
             try
             {
-                _conn.Open(); 
+                _conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "LayVaiTro";
                 cmd.Parameters.AddWithValue("Email", email);
                 if (Convert.ToInt16(cmd.ExecuteScalar()) == 1)
-                    return true;     
+                    return true;
             }
             catch { }
             finally { _conn.Close(); }

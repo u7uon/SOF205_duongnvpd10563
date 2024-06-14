@@ -21,3 +21,5 @@ D:\Assignment\Assignment\GUI_QLBanHang\obj\Release\GUI_QLBanHang.csproj.CoreComp
 D:\Assignment\Assignment\GUI_QLBanHang\obj\Release\GUI_QLBa.12D288D4.Up2Date
 D:\Assignment\Assignment\GUI_QLBanHang\obj\Release\GUI_QLBanHang.exe
 D:\Assignment\Assignment\GUI_QLBanHang\obj\Release\GUI_QLBanHang.pdb
+D:\Assignment\Assignment\GUI_QLBanHang\bin\Release\QuanLyBanHang.mdf
+D:\Assignment\Assignment\GUI_QLBanHang\bin\Release\QuanLyBanHang_log.ldf
